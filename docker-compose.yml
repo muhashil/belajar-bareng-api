@@ -19,6 +19,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/php/Dockerfile
+    image: lumen_app
     container_name: lumen_app
     working_dir: /var/www/html/public
     command: php-fpm
@@ -60,7 +61,8 @@ services:
   artisan:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./docker/php/Dockerfile
+    image: artisan
     container_name: artisan
     volumes: 
       - .:/var/www/html

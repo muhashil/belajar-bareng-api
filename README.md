@@ -8,4 +8,7 @@ Belajar bareng adalah platform yang dapat digunakan oleh seseorang untuk berbagi
 ### Setup Project
 1. Create file `.env` in project directory and change variable value depending your development environment. Check reference file `.env.example`. 
 
-1. Run `composer install` to install required dependencies.
+1. Run `docker-compose run --rm composer composer install` to install required dependencies.
+
+1. Run `docker-compose build && docker-compose up` to run application.
+
