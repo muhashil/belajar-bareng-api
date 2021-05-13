@@ -1,5 +1,5 @@
 # Belajar Bareng API
-Belajar bareng adalah platform yang dapat digunakan oleh seseorang untuk berbagi pengetahuan kepada masyarakat secara online.
+Belajar bareng is a website-based learning platform.
 
 ### Requirements
 1. PHP >= 7.3
@@ -11,4 +11,7 @@ Belajar bareng adalah platform yang dapat digunakan oleh seseorang untuk berbagi
 1. Run `docker-compose run --rm composer composer install` to install required dependencies.
 
 1. Run `docker-compose build && docker-compose up` to run application.
+
+### Database Design
+You can view database design here: https://dbdiagram.io/d/609d54f5b29a09603d14c320
 
