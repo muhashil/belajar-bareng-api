@@ -8,6 +8,8 @@ Belajar bareng adalah platform yang dapat digunakan oleh seseorang untuk berbagi
 ### Setup Project
 1. Create file `.env` in project directory and change variable value depending your development environment. Check reference file `.env.example`. 
 
+1. (Optional) For local development using linux, please adjust "user" value in `docker-compose.yml` with local user ID. For ubuntu, you can check by run command `$ id -u` and `$ id -g` in terminal.
+
 1. Run `docker-compose run --rm composer composer install` to install required dependencies.
 
 1. Run `docker-compose build && docker-compose up` to run application.
