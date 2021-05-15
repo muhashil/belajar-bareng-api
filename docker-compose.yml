@@ -54,6 +54,7 @@ services:
     container_name: composer
     volumes:
       - .:/var/www/html
+    # user: 1000:1000 # uncomment if in local development, change 1000 to current user ID in your OS (linux)
     working_dir: /var/www/html
     networks: 
       - lumet_net
@@ -68,6 +69,7 @@ services:
       - .:/var/www/html
     depends_on: 
       - db
+    # user: 1000:1000 # uncomment if in local development, change 1000 to current user ID in your OS (linux)
     working_dir: /var/www/html
     entrypoint: ['/var/www/html/artisan']
     networks: 

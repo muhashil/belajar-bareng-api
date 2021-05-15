@@ -12,3 +12,4 @@ Belajar bareng adalah platform yang dapat digunakan oleh seseorang untuk berbagi
 
 1. Run `docker-compose build && docker-compose up` to run application.
 
+1. Run `docker-compose run --rm artisan migrate` to run migration.
