@@ -3,8 +3,9 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Carbon\Carbon;
 
-class CreateUsersTable extends Migration
+class CreateUserverificationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +14,13 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('user_verifications', function (Blueprint $table) {
             $table->id();
-            $table->string('email', 50)->unique();
-            $table->string('password');
-            $table->boolean('is_verified')->default(false);
+            $table->foreignId('user_id')->constrained('users');
+            $table->string('code', 250);
+            $table->dateTime('expired_at');
             $table->timestamps();
-            $table->softDeletes($column = 'deleted_at');
+            $table->softDeletes();
         });
     }
 
@@ -30,6 +31,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('user_verifications');
     }
 }
